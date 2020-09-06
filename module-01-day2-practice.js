@@ -151,15 +151,15 @@
 // ================================================================================
 // =============task-06============================================================
 // ================================================================================
-let input = confirm("Хотите ввсести число?");
-let total = 0;
+// let input = confirm("Хотите ввсести число?");
+// let total = 0;
 
-// total = prompt();
-// total = ++total;
+// // total = prompt();
+// // total = ++total;
 
-while (input) {
-  input = +prompt();
-  total += input;
-  console.log(input);
-}
-console.log(total);
+// while (input) {
+//   input = +prompt();
+//   total += input;
+//   console.log(input);
+// }
+// console.log(total);

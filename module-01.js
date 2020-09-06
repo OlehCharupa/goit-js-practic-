@@ -34,38 +34,38 @@
 // console.log(messege);
 // let newMessege = `my age is ${age}`;
 
-let num = 10;
-let boolNum = Boolean(num);
-console.log(boolNum);
+// let num = 10;
+// let boolNum = Boolean(num);
+// console.log(boolNum);
 
-num = 0;
-boolNum = Boolean(num);
-console.log(boolNum);
+// num = 0;
+// boolNum = Boolean(num);
+// console.log(boolNum);
 
-let str = `Sasha`;
-let boolStr = Boolean(str);
-console.log(boolStr);
+// let str = `Sasha`;
+// let boolStr = Boolean(str);
+// console.log(boolStr);
 
-str = ``;
-boolStr = Boolean(str);
-console.log(boolStr);
+// str = ``;
+// boolStr = Boolean(str);
+// console.log(boolStr);
 
-str = ` `;
-boolStr = Boolean(str);
-console.log(boolStr);
+// str = ` `;
+// boolStr = Boolean(str);
+// console.log(boolStr);
 
-let isOpen;
-console.log(isOpen);
-console.log(typeof isOpen);
+// let isOpen;
+// console.log(isOpen);
+// console.log(typeof isOpen);
 
-let boolUnd = Boolean(isOpen);
-console.log(boolUnd);
-console.log(typeof boolUnd);
+// let boolUnd = Boolean(isOpen);
+// console.log(boolUnd);
+// console.log(typeof boolUnd);
 
-isOpen = null;
-console.log(boolUnd);
-console.log(typeof isOpen);
+// isOpen = null;
+// console.log(boolUnd);
+// console.log(typeof isOpen);
 
-let boolNull = Boolean(isOpen);
-console.log(boolNull);
-console.log(typeof boolNull);
+// let boolNull = Boolean(isOpen);
+// console.log(boolNull);
+// console.log(typeof boolNull);
