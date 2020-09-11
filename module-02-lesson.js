@@ -212,17 +212,12 @@
 
 // const findLongestWord = function (string) {
 //   let arrayWord = string.split(" ");
-//   //   console.log(arrayWord);
 //   let longestWord = arrayWord[0];
 //   let wordLength = arrayWord[0].length;
 //   for (let i = 1; i < arrayWord.length; i++) {
-//     // console.log(arrayWord[i]);
-//     // console.log(arrayWord[i].length);
 //     if (wordLength < arrayWord[i].length) {
 //       wordLength = arrayWord[i].length;
-//       //   console.log(wordLength);
-//       longestWord = arrayWord[i];
-//       //   console.log(longestWord);
+//     longestWord = arrayWord[i];
 //     }
 //   }
 //   return longestWord;
