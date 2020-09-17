@@ -170,64 +170,64 @@
 //  ======  +  ============  +  ============  +  ============  +  ======
 // =======================================================================
 
-const Bouquet = function (
-  flowers = "",
-  bottles = 0,
-  octopus = 0,
-  fruits = "",
-  sweets = "",
-  vegatables = "",
-  sausages = 0
-) {
-  this.flowers = flowers;
-  this.bottles = bottles;
-  this.octopus = octopus;
-  this.fruits = fruits;
-  this.sweets = sweets;
-  this.vegatables = vegatables;
-  this.sausages = sausages;
-  this.isDelivery = false;
-};
+// const Bouquet = function (
+//   flowers = "",
+//   bottles = 0,
+//   octopus = 0,
+//   fruits = "",
+//   sweets = "",
+//   vegatables = "",
+//   sausages = 0
+// ) {
+//   this.flowers = flowers;
+//   this.bottles = bottles;
+//   this.octopus = octopus;
+//   this.fruits = fruits;
+//   this.sweets = sweets;
+//   this.vegatables = vegatables;
+//   this.sausages = sausages;
+//   this.isDelivery = false;
+// };
 
-const myBouquet = new Bouquet(
-  "roses",
-  undefined,
-  undefined,
-  undefined,
-  "sugar"
-);
+// const myBouquet = new Bouquet(
+//   "roses",
+//   undefined,
+//   undefined,
+//   undefined,
+//   "sugar"
+// );
 
-Bouquet.prototype.changeFlowers = function (value) {
-  if (!this.isDelivery) {
-    return (this.flowers = value);
-  }
-  return "Заказ отправлен!!!";
-};
+// Bouquet.prototype.changeFlowers = function (value) {
+//   if (!this.isDelivery) {
+//     return (this.flowers = value);
+//   }
+//   return "Заказ отправлен!!!";
+// };
 
-Bouquet.prototype.toggleProp = function () {
-  if (this.isDelivery) return (this.isDelivery = false);
-  if (!this.isDelivery) return (this.isDelivery = true);
-};
+// Bouquet.prototype.toggleProp = function () {
+//   if (this.isDelivery) return (this.isDelivery = false);
+//   if (!this.isDelivery) return (this.isDelivery = true);
+// };
 
-// myBouquet.changeFlowers("pion");
+// // myBouquet.changeFlowers("pion");
+// // console.log(myBouquet);
+
+// // myBouquet.toggleProp();
+// // console.log(myBouquet);
+
+// // myBouquet.changeFlowers("cactus");
+// // console.log(myBouquet);
+// console.log(myBouquet.changeFlowers("pion"));
 // console.log(myBouquet);
-
+// // myBouquet.isDelivery = true;
+// console.log(myBouquet);
+// console.log(myBouquet.changeFlowers("cactus"));
 // myBouquet.toggleProp();
 // console.log(myBouquet);
-
-// myBouquet.changeFlowers("cactus");
+// console.log(myBouquet.changeFlowers("cactus"));
 // console.log(myBouquet);
-console.log(myBouquet.changeFlowers("pion"));
-console.log(myBouquet);
-// myBouquet.isDelivery = true;
-console.log(myBouquet);
-console.log(myBouquet.changeFlowers("cactus"));
-myBouquet.toggleProp();
-console.log(myBouquet);
-console.log(myBouquet.changeFlowers("cactus"));
-console.log(myBouquet);
-myBouquet.toggleProp();
-console.log(myBouquet);
+// myBouquet.toggleProp();
+// console.log(myBouquet);
 
 // =======================================================================
 //  =====  +++  ==========  +++  ==========  +++  ==========  +++  =====
