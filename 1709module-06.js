@@ -112,55 +112,55 @@ const users = [
 ];
 
 // создать массив с именами пользователей .forEach
-let userName2 = [];
-users.forEach((user) => userName2.push(user.name));
-console.log(userName2);
+// let userName2 = [];
+// users.forEach((user) => userName2.push(user.name));
+// console.log(userName2);
 
-// создать массив с именами пользователей .map
-const userName = users.map((user) => user.name);
-console.log(userName);
+// // создать массив с именами пользователей .map
+// const userName = users.map((user) => user.name);
+// console.log(userName);
 
-// найти пользователей по цвету глаз .filter
-const eyeColor1 = function (user, color) {
-  return user.filter((elem) => elem.eyeColor === color);
-};
-console.log(eyeColor1(users, "brown"));
+// // найти пользователей по цвету глаз .filter
+// const eyeColor1 = function (user, color) {
+//   return user.filter((elem) => elem.eyeColor === color);
+// };
+// console.log(eyeColor1(users, "brown"));
 
-// найти пользователь по его email .find
-const userEmail = function (user, email) {
-  return user.find((elem) => elem.email === email);
-};
-console.log(userEmail(users, "elmahead@omatom.com"));
+// // найти пользователь по его email .find
+// const userEmail = function (user, email) {
+//   return user.find((elem) => elem.email === email);
+// };
+// console.log(userEmail(users, "elmahead@omatom.com"));
 
-// найти пользователей возраст которых от 30 до 40 .filter
-const ageUser = function (user, minAge, maxAge) {
-  return user.filter((elem) => elem.age >= minAge && elem.age <= maxAge);
-};
-console.log(ageUser(users, 30, 40));
+// // найти пользователей возраст которых от 30 до 40 .filter
+// const ageUser = function (user, minAge, maxAge) {
+//   return user.filter((elem) => elem.age >= minAge && elem.age <= maxAge);
+// };
+// console.log(ageUser(users, 30, 40));
 
-// найти сумму баланса всех пользователей .reduce
-const sumBalance = function (users) {
-  return users.reduce((acc, elem) => acc + elem.balance, 0);
-};
-console.log(sumBalance(users));
+// // найти сумму баланса всех пользователей .reduce
+// const sumBalance = function (users) {
+//   return users.reduce((acc, elem) => acc + elem.balance, 0);
+// };
+// console.log(sumBalance(users));
 
-// найти всех пользователей у которых есть в друзьях "Briana Decker"
-const findByFriend = function (users, friend) {
-  return users.filter((elem) => elem.friends.includes(friend));
-};
-console.log(findByFriend(users, "Briana Decker"));
+// // найти всех пользователей у которых есть в друзьях "Briana Decker"
+// const findByFriend = function (users, friend) {
+//   return users.filter((elem) => elem.friends.includes(friend));
+// };
+// console.log(findByFriend(users, "Briana Decker"));
 
-//  собрать уникальные скилы всех пользователей в отдельный массив
+// //  собрать уникальные скилы всех пользователей в отдельный массив
 
-const getSkills = (users) =>
-  users.reduce((allSkills, user) => {
-    allSkills.push(...user.skills);
+// const getSkills = (users) =>
+//   users.reduce((allSkills, user) => {
+//     allSkills.push(...user.skills);
 
-    return allSkills;
-  }, []);
+//     return allSkills;
+//   }, []);
 
-const unicSkills = function (getSkills) {
-  let result = getSkills.filter((elem, i) => getSkills.indexOf(elem) == i);
-  return result;
-};
-console.log(unicSkills(getSkills(users)));
+// const unicSkills = function (getSkills) {
+//   let result = getSkills.filter((elem, i) => getSkills.indexOf(elem) == i);
+//   return result;
+// };
+// console.log(unicSkills(getSkills(users)));
