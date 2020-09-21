@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  height: 400vh;
+  position: relative;
+}
+.cube {
+  padding: 30px;
+  margin: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.circule {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  transform: translate(-150%, -150%);
+}
