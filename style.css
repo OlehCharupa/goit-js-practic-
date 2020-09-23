@@ -22,11 +22,6 @@ ul {
   margin: 20px auto;
   list-style: none;
 }
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
 .card {
   width: 300px;
@@ -59,12 +54,11 @@ h2 {
   padding-bottom: 50px;
   text-overflow: ellipsis;
 }
-/* .text2 {
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 5px;
-  padding-bottom: 50px;
-  text-overflow: ellipsis;
-} */
 
 /* =========================================== */
+img {
+  display: block;
+  margin: 20px auto;
+  /* width: 100%;
+    height: auto; */
+}
