@@ -3,6 +3,12 @@ body {
   height: 400vh;
   position: relative;
 }
+.yellow_background {
+  background-color: yellow;
+}
+.blue_background {
+  background-color: blue;
+}
 .cube {
   padding: 30px;
   margin: 10px;
