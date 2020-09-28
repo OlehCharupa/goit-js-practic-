@@ -23,7 +23,7 @@ const clickStop = document.querySelector(".stop")
 let result = document.querySelector(".result")
 let i = 0;
 let timer;
-let resept;
+let resept = 0;
 
 clickStart.addEventListener("click", () => {
     clickStart.setAttribute("disabled", "disabled");
@@ -31,19 +31,22 @@ clickStart.addEventListener("click", () => {
         result.textContent = `${++i}`;
     }, 1000);
 })
-clickStop.addEventListener("click", () => {
+clickStop.addEventListener("click", (e) => {
+    console.log(e.target);
+    clearInterval(timer);
     console.log(clickStop);
-    if (clickStop) {
-        clearInterval(timer);
+    if (e.target === clickStop) {
+        clickStart.removeAttribute("disabled");
+        i = resept;
     }
-    clickStop.addEventListener("click", () => {
-
-        if (result.textContent == resept) {
-            clickStart.removeAttribute("disabled");
-            result.textContent = `${resept}`;
-        }
-    })
 })
+
+
+// clickStop.addEventListener("click", () => {
+
+//     if (result.textContent > 0) {
+//     }
+// })
 // =====================================================
 // =====================================================
 // =====================================================
@@ -100,3 +103,4 @@ clickStop.addEventListener("click", () => {
 // =====================================================
 // =====================================================
 // =====================================================
+
