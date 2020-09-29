@@ -24,29 +24,29 @@ let result = document.querySelector(".result")
 let i = 0;
 let timer;
 let resept = 0;
+clickStart.style.padding = "10px";
+clickStop.style.padding = "10px";
+clickStart.style.margin = "10px";
+clickStop.style.margin = "10px";
+result.style.fontSize = "25px"
+clickStart.style.fontSize = "20px";
+clickStop.style.fontSize = "20px";
 
 clickStart.addEventListener("click", () => {
-    clickStart.setAttribute("disabled", "disabled");
     timer = setInterval(() => {
         result.textContent = `${++i}`;
     }, 1000);
 })
 clickStop.addEventListener("click", (e) => {
-    console.log(e.target);
+    clickStart.getAttribute("disabled");
     clearInterval(timer);
-    console.log(clickStop);
-    if (e.target === clickStop) {
-        clickStart.removeAttribute("disabled");
-        i = resept;
+    result.textContent = `${i}`;
+    if (e.target == clickStop) {
+        console.log(i);
     }
 })
 
 
-// clickStop.addEventListener("click", () => {
-
-//     if (result.textContent > 0) {
-//     }
-// })
 // =====================================================
 // =====================================================
 // =====================================================
