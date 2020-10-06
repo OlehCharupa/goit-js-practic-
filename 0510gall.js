@@ -3,13 +3,11 @@ import gallery from "./photo.js"
 const galleryList = document.querySelector(".photo-gallery")
 const overlay = document.querySelector(".js-lightbox")
 const overlayImage = document.querySelector(".lightbox__image")
-const overlayBox = document.querySelector(".lightbox__overlay")
 
 
 const cart = gallery.map((el, index) => {
     const title = document.createElement("h2")
     title.setAttribute("class", "title")
-
     title.textContent = el.title
     // 
     const picture = document.createElement("img")
@@ -41,7 +39,9 @@ const cart = gallery.map((el, index) => {
     // 
     const galleryItem = document.createElement("li")
     galleryItem.setAttribute("class", "galleryItem")
+    // 
     galleryItem.append(title, picture, description, subtitle, seria, photographer, country)
+    // 
     galleryList.append(galleryItem)
 })
 
@@ -52,10 +52,7 @@ galleryList.addEventListener("click", (e) => {
         overlayImage.dataset.index = e.target.dataset.index
     }
 })
-
 overlay.addEventListener("click", clearImg)
-
-
 window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         clearImg()
@@ -68,8 +65,6 @@ window.addEventListener("keydown", (e) => {
     }
 
 })
-
-
 function clearImg() {
     overlay.classList.remove("is-open")
     overlayImage.src = ""
@@ -96,14 +91,3 @@ function arrowRight() {
     console.log(index);
     setNewSrc(1, index)
 }
-
-
-
-
-
-
-
-
-
-
-    // let currentIndex;
