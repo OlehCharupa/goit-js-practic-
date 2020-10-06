@@ -3,7 +3,9 @@ import gallery from "./photo.js"
 const galleryList = document.querySelector(".photo-gallery")
 const overlay = document.querySelector(".js-lightbox")
 const overlayImage = document.querySelector(".lightbox__image")
-
+const overlayBox = document.querySelector(".lightbox__overlay")
+const buttonClose = document.querySelector(".lightbox__button")
+console.log(overlayBox);
 
 const cart = gallery.map((el, index) => {
     const title = document.createElement("h2")
@@ -51,8 +53,18 @@ galleryList.addEventListener("click", (e) => {
         overlayImage.src = e.target.src
         overlayImage.dataset.index = e.target.dataset.index
     }
-})
-overlay.addEventListener("click", clearImg)
+});
+
+buttonClose.addEventListener("click", clearImg)
+
+overlayBox.addEventListener("click", clearImg)
+// overlayBox.addEventListener("click", (e) => {
+//     console.log("ok");
+//     if (e.target.nodeName !== "IMG") {
+//         clearImg()
+//     }
+// })
+
 window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         clearImg()
