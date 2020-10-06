@@ -6,7 +6,7 @@ const overlayImage = document.querySelector(".lightbox__image")
 const overlayBox = document.querySelector(".lightbox__overlay")
 
 
-const cart = gallery.map(el => {
+const cart = gallery.map((el, index) => {
     const title = document.createElement("h2")
     title.setAttribute("class", "title")
 
@@ -17,6 +17,7 @@ const cart = gallery.map(el => {
     picture.setAttribute("src", el.image)
     picture.setAttribute("alt", el.category)
     picture.setAttribute("width", "450px")
+    picture.setAttribute("data-index", index)
     // 
     const description = document.createElement("p")
     description.setAttribute("class", "description")
@@ -44,23 +45,65 @@ const cart = gallery.map(el => {
     galleryList.append(galleryItem)
 })
 
-
 galleryList.addEventListener("click", (e) => {
     if (e.target.nodeName === "IMG") {
         overlay.classList.add("is-open")
         overlayImage.src = e.target.src
-
+        overlayImage.dataset.index = e.target.dataset.index
     }
 })
 
 overlay.addEventListener("click", clearImg)
 
+
 window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         clearImg()
     }
+    if (e.key === "ArrowLeft") {
+        arrowLeft()
+    }
+    if (e.key === "ArrowRight") {
+        arrowRight()
+    }
+
 })
+
+
 function clearImg() {
     overlay.classList.remove("is-open")
     overlayImage.src = ""
 }
+function setNewSrc(step, index) {
+    overlayImage.dataset.index = `${index + step}`
+    overlayImage.src = gallery[index + step].image
+}
+function arrowLeft() {
+    let index = +overlayImage.dataset.index
+    if (index === 0) {
+        setNewSrc(0, gallery.length - 1)
+        return
+    }
+    console.log(index);
+    setNewSrc(-1, index)
+}
+function arrowRight() {
+    let index = +overlayImage.dataset.index
+    if (index === gallery.length - 1) {
+        setNewSrc(0, 0)
+        return
+    }
+    console.log(index);
+    setNewSrc(1, index)
+}
+
+
+
+
+
+
+
+
+
+
+    // let currentIndex;
