@@ -58,21 +58,15 @@ galleryList.addEventListener("click", (e) => {
 buttonClose.addEventListener("click", clearImg)
 
 overlayBox.addEventListener("click", clearImg)
-// overlayBox.addEventListener("click", (e) => {
-//     console.log("ok");
-//     if (e.target.nodeName !== "IMG") {
-//         clearImg()
-//     }
-// })
 
 window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+    if (e.key === "Escape" || e.code === 'Escape') {
         clearImg()
     }
-    if (e.key === "ArrowLeft") {
+    if (e.key === "ArrowLeft" || e.code === 'ArrowLeft') {
         arrowLeft()
     }
-    if (e.key === "ArrowRight") {
+    if (e.key === "ArrowRight" || e.code === 'ArrowRight') {
         arrowRight()
     }
 
